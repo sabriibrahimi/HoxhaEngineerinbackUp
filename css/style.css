@@ -1,0 +1,333 @@
+:root {
+    --primary-color: #dc3545; /* Red (Bootstrap's danger color) */
+    --secondary-color: #ffffff; /* White */
+    --text-color: #333333; /* Dark gray */
+    --background-color: #f8f9fa; /* Light gray */
+    --accent-color: #000000; /* Black for links */
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--background-color);
+}
+
+/* Header and Navbar Consistent Look for All Pages */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* Navigation styles for all pages */
+.header .navbar:first-child {
+    padding: 0.5rem 0;
+}
+
+.header .navbar:first-child .container {
+    padding-left: 1.5rem;
+}
+
+.header .navbar:last-child {
+    padding: 0.3rem 0;
+    border-top: none !important;
+}
+
+.header .navbar-nav {
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.header .navbar-collapse {
+    justify-content: flex-start !important;
+    padding-left: 0;
+}
+
+.header .nav-item {
+    margin-left: 0;
+}
+
+.header .navbar,
+.header .navbar.navbar-dark,
+.header .navbar.navbar-light {
+    background: transparent !important;
+    border: none;
+    box-shadow: none;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.header .navbar-nav .nav-link,
+.header .navbar-brand .logo-text {
+    color: #fff !important;
+    transition: color 0.3s;
+}
+
+.header .navbar-nav .nav-link.active,
+.header .navbar-nav .nav-link:hover {
+    color: #dc3545 !important;
+}
+
+.header .navbar-brand img {
+    height: 35px;
+    width: auto;
+    transition: none;
+}
+
+/* SCROLLED STATE: WHITE BACKGROUND, DARK TEXT/LOGO */
+.header.scrolled {
+    background: #fff !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+}
+
+.header.scrolled .navbar,
+.header.scrolled .navbar.navbar-dark,
+.header.scrolled .navbar.navbar-light {
+    background: #fff !important;
+    box-shadow: none;
+}
+
+.header.scrolled .navbar-nav .nav-link,
+.header.scrolled .navbar-brand .logo-text {
+    color: #333 !important;
+}
+
+.header.scrolled .navbar-nav .nav-link.active,
+.header.scrolled .navbar-nav .nav-link:hover {
+    color: #dc3545 !important;
+}
+
+.header.scrolled .navbar-brand img {
+    height: 35px;
+}
+
+@media (max-width: 991.98px) {
+    .header .navbar-brand {
+        margin-right: 1rem;
+    }
+    .header .navbar-brand img {
+        height: 30px;
+    }
+    .header .navbar-nav .nav-link {
+        color: #fff !important;
+    }
+    .header.scrolled .navbar-nav .nav-link {
+        color: #333 !important;
+    }
+}
+
+.logo-text {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo-text span {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.header.scrolled .logo-text {
+    color: var(--text-color);
+}
+
+/* Hero Sections */
+.hero,
+.contact-hero,
+.about-hero,
+.services-hero,
+.projects-hero {
+    min-height: 80vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--secondary-color);
+    padding-top: 80px;
+}
+
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/hero-bg.jpg');
+}
+
+.contact-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/contact-bg.jpg');
+}
+
+.about-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/about-bg.jpg');
+}
+
+.services-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/services-bg.jpg');
+}
+
+.projects-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/projects-bg.jpg');
+}
+
+.home-hero {
+    position: relative;
+    height: 100vh;
+    min-height: 100vh;
+    background: #808184 url('../images/Homeimage.png') center center/cover no-repeat !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.home-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); /* semi-transparent black */
+    z-index: 2;
+}
+
+.home-hero > .container, .home-hero > div.container {
+    position: relative;
+    z-index: 3;
+}
+
+/* Cards */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.card-img-top {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 4px;
+    padding: 0.8rem 1.5rem;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background-color: #d48f1e;
+    border-color: #d48f1e;
+    transform: translateY(-3px);
+}
+
+/* Forms */
+.form-floating label {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(245, 166, 35, 0.25);
+}
+
+/* Success Highlights */
+.success-highlights {
+    padding: 3rem 5%;
+    background: var(--background-color);
+}
+
+.success-highlights h2 {
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: 2rem;
+}
+
+.success-highlights h3 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: var(--primary-color);
+}
+
+/* Clients */
+.clients-grid img {
+    transition: var(--transition);
+}
+
+.clients-grid img:hover {
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+    .navbar {
+        padding: 0.5rem 2%;
+    }
+    .hero,
+    .contact-hero,
+    .about-hero,
+    .services-hero,
+    .projects-hero {
+        min-height: 60vh;
+    }
+}
+
+.home-bg {
+    background: #808184;
+}
+
+.success-highlights,
+.success-highlights ~ section {
+    background: #fff !important;
+}
+
+.navbar-brand {
+    padding: 0;
+    margin-right: 2rem;
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.header.scrolled .navbar-brand img {
+    height: 35px;
+}

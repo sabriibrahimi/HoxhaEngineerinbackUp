@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoxha Engineering</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/removed.png">
+    <style>body { visibility: hidden; }</style>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"></noscript>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/language-switcher.css" rel="stylesheet">
+</head>
+<body class="home-bg">
+<!-- Header -->
+<header class="header fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="images/removed.png" alt="Logo" height="44" style="object-fit:contain;">
+                <span class="d-flex flex-column lh-1">
+                    <span class="fw-bold" style="font-size:1.7rem; letter-spacing:2px;">HOXHA</span>
+                    <span class="fw-normal" style="font-size:1rem; letter-spacing:0.2em;">ENGINEERING</span>
+                </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-lg-none ms-auto d-flex align-items-center" style="height:44px;">
+                <!-- Language Switcher for mobile -->
+                <div class="dropdown ms-2">
+                    <button class="btn btn-link text-light text-decoration-none dropdown-toggle d-flex align-items-center gap-1" type="button" id="langDropdownMobile" data-bs-toggle="dropdown" aria-expanded="false" style="font-size:1rem; height:38px;">
+                        <i class="fas fa-globe"></i>
+                        <span>Shqip</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end mt-2 shadow-sm border-0 p-2" aria-labelledby="langDropdownMobile" style="min-width:150px; border-radius:0.5rem;">
+                        <li><a class="dropdown-item d-flex align-items-center gap-2 rounded-2 py-2" href="#" onclick="setLanguage('sq')"><img src="images/flags/sq.png" alt="Albanian" width="20" class="me-2"> Shqip</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center gap-2 rounded-2 py-2" href="#" onclick="setLanguage('mk')"><img src="images/flags/mk.png" alt="Macedonian" width="20" class="me-2"> Македонски</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center gap-2 rounded-2 py-2" href="#" onclick="setLanguage('en')"><img src="images/flags/en.png" alt="English" width="20" class="me-2"> English</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ps-0 me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html" data-i18n="home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html" data-i18n="projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html" data-i18n="services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html" data-i18n="about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="contact">Contact</a></li>
+                </ul>
+                <!-- Language Switcher for desktop -->
+                <div class="dropdown d-none d-lg-block">
+                    <button class="btn btn-link text-light text-decoration-none dropdown-toggle d-flex align-items-center gap-2" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-globe"></i>
+                        <span>Shqip</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" aria-labelledby="langDropdown">
+                        <li><a class="dropdown-item d-flex align-items-center gap-2" href="#" onclick="setLanguage('sq')"><img src="images/flags/sq.png" alt="Albanian" width="20"> Shqip</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center gap-2" href="#" onclick="setLanguage('mk')"><img src="images/flags/mk.png" alt="Macedonian" width="20"> Македонски</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center gap-2" href="#" onclick="setLanguage('en')"><img src="images/flags/en.png" alt="English" width="20"> English</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<section class="hero home-hero d-flex align-items-center text-center text-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 animate__animated animate__fadeInUp" data-i18n="hero-title">Building Your Dream Home</h1>
+                <p class="lead mb-4 animate__animated animate__fadeInUp" data-i18n="hero-text">Professional construction and architectural services for residential and commercial projects</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Commitment Section (Full-width, two columns) -->
+
+
+<!-- Success Highlights Section -->
+<section class="success-highlights" style="position: relative; z-index: 10; margin-top: 0; background: transparent;">
+    <div class="container" style="background: transparent;">
+        <div class="row g-0 shadow-lg overflow-hidden" style="box-shadow: 0 8px 32px rgba(0,0,0,0.18)!important; background: transparent;">
+            <div class="col-lg-5 d-flex flex-column justify-content-center align-items-start p-5" style="background: #2d0101; min-height: 340px;">
+                <h2 class="fw-bold display-5 mb-3 text-white" data-i18n="success-title">33 Years Of Undefeated Success</h2>
+                <p class="mb-4 text-white" style="max-width: 420px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus. Vivamus magna justo, lacinia eget consectetur sed, convallis .</p>
+            </div>
+            <div class="col-lg-7 bg-white">
+                <div class="row h-100 g-0">
+                    <div class="col-6 border-end border-bottom p-4 d-flex flex-column align-items-center justify-content-center">
+                        <h2 class="fw-bold display-6 mb-1 text-dark" data-i18n="projects-finished-number">512+</h2>
+                        <p class="mb-0 text-secondary" data-i18n="projects-finished">Projects Finished</p>
+                    </div>
+                    <div class="col-6 border-bottom p-4 d-flex flex-column align-items-center justify-content-center">
+                        <h2 class="fw-bold display-6 mb-1 text-dark" data-i18n="years-experience-number">25+</h2>
+                        <p class="mb-0 text-secondary" data-i18n="years-experience">Years Experience</p>
+                    </div>
+                    <div class="col-6 border-end p-4 d-flex flex-column align-items-center justify-content-center">
+                        <h2 class="fw-bold display-6 mb-1 text-dark" data-i18n="revenue-number">1120+</h2>
+                        <p class="mb-0 text-secondary" data-i18n="revenue">Revenue in 2017</p>
+                    </div>
+                    <div class="col-6 p-4 d-flex flex-column align-items-center justify-content-center">
+                        <h2 class="fw-bold display-6 mb-1 text-dark" data-i18n="colleagues-number">1520+</h2>
+                        <p class="mb-0 text-secondary" data-i18n="colleagues">Colleagues</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="services py-5 bg-light">
+  <div class="container">
+    <div class="d-flex flex-wrap justify-content-between align-items-center mb-4">
+      <div>
+        <h5 class="fw-semibold mb-1 text-start" style="font-size:1.1rem; color:#222; letter-spacing:0.5px;">Build Your Dream</h5>
+        <span class="fw-bold text-start" style="font-size:2.2rem; color:#111;">Quality services</span>
+      </div>
+      <a href="services.html" class="btn btn-link fw-bold px-0 ms-2" style="color:#111; font-size:1.1rem; text-decoration:none; border-radius:0; text-transform:uppercase;">View all &rarr;</a>
+    </div>
+    <div class="row justify-content-center g-4">
+      <div class="col-md-4 d-flex flex-column align-items-center mb-4">
+        <div class="card w-100 h-100 border-0" style="border-radius:0; box-shadow:0 2px 12px rgba(0,0,0,0.07);">
+          <img src="images/Services_images/residential.png" class="card-img-top" style="width:100%; height:220px; object-fit:cover; border-radius:0; margin-top:0;" alt="Residential Buildings">
+        </div>
+        <h4 class="mt-3 text-center" style="font-weight:600;">Residential Buildings</h4>
+      </div>
+      <div class="col-md-4 d-flex flex-column align-items-center mb-4">
+        <div class="card w-100 h-100 border-0" style="border-radius:0; box-shadow:0 2px 12px rgba(0,0,0,0.07);">
+          <img src="images/Services_images/individual.png" class="card-img-top" style="width:100%; height:220px; object-fit:cover; border-radius:0; margin-top:0;" alt="Individual Buildings">
+        </div>
+        <h4 class="mt-3 text-center" style="font-weight:600;">Individual Buildings</h4>
+      </div>
+      <div class="col-md-4 d-flex flex-column align-items-center mb-4">
+        <div class="card w-100 h-100 border-0" style="border-radius:0; box-shadow:0 2px 12px rgba(0,0,0,0.07);">
+          <img src="images/Services_images/collective.png" class="card-img-top" style="width:100%; height:220px; object-fit:cover; border-radius:0; margin-top:0;" alt="Collective Buildings">
+        </div>
+        <h4 class="mt-3 text-center" style="font-weight:600;">Collective Buildings</h4>
+      </div>
+    </div>
+    <div class="row justify-content-center g-4 mt-1">
+      <div class="col-md-4 d-flex flex-column align-items-center mb-4">
+        <div class="card w-100 h-100 border-0" style="border-radius:0; box-shadow:0 2px 12px rgba(0,0,0,0.07);">
+          <img src="images/Services_images/social.png" class="card-img-top" style="width:100%; height:220px; object-fit:cover; border-radius:0; margin-top:0;" alt="Social Buildings">
+        </div>
+        <h4 class="mt-3 text-center" style="font-weight:600;">Social Buildings</h4>
+      </div>
+      <div class="col-md-4 d-flex flex-column align-items-center mb-4">
+        <div class="card w-100 h-100 border-0" style="border-radius:0; box-shadow:0 2px 12px rgba(0,0,0,0.07);">
+          <img src="images/Services_images/public.png" class="card-img-top" style="width:100%; height:220px; object-fit:cover; border-radius:0; margin-top:0;" alt="Public Buildings">
+        </div>
+        <h4 class="mt-3 text-center" style="font-weight:600;">Public Buildings</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container-fluid px-0">
+    <div class="row gx-3 align-items-stretch position-relative" style="--bs-gutter-x: 0.5cm;">
+        <!-- Vertical White Bar -->
+        <div class="d-none d-lg-block position-absolute top-0 start-50 translate-middle-x" style="width:0.5cm; height:100%; background:#fff; z-index:3; border-radius:0rem;"></div>
+        <!-- Left: Commitment -->
+        <div class="col-lg-6 d-flex align-items-center justify-content-center position-relative" style="min-height:420px; background: url('images/commitment-bg.jpg') center/cover no-repeat;">
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background:rgba(30,32,44,0.82);"></div>
+            <div class="position-relative p-5 p-md-5 w-100" style="z-index:2; max-width: 700px;">
+                <h5 class="fw-bold mb-2" style="color:#ffffff; letter-spacing:1px; font-size:2rem;">Sustainability</h5>
+                <h2 class="fw-bold display-2 mb-4 text-white" style="font-size:3.2rem;">Committed To Keep<br>People Healthy & Safe</h2>
+                <p class="mb-0 text-white-50" style="max-width: 540px; font-size:1.3rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus.</p>
+            </div>
+        </div>
+        <!-- Right: Best Practices -->
+        <div class="col-lg-6 d-flex align-items-center justify-content-center position-relative" style="min-height:420px; background: url('images/practices-bg.jpg') center/cover no-repeat;">
+            <div class="position-absolute top-0 start-0 w-100 h-100" style="background: #2d0101;"></div>
+            <div class="position-relative p-5 p-md-5 w-100" style="z-index:2; max-width: 700px;">
+                <h3 class="fw-bold mb-4 text-white" style="font-size:3.2rem;">We Follow Best Practices</h3>
+                <p class="mb-4 text-white-50" style="font-size:1.5rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus.</p>
+                <ul class="list-unstyled mb-0">
+                    <li class="mb-4 d-flex align-items-center gap-3"><i class="fas fa-recycle fa-3x text-warning"></i> <span class="fw-bold text-white" style="font-size:2rem;">Sustainability</span></li>
+                    <li class="mb-4 d-flex align-items-center gap-3"><i class="fas fa-clock fa-3x text-warning"></i> <span class="fw-bold text-white" style="font-size:2rem;">Project On Time</span></li>
+                    <li class="mb-4 d-flex align-items-center gap-3"><i class="fas fa-lightbulb fa-3x text-warning"></i> <span class="fw-bold text-white" style="font-size:2rem;">Latest Designs</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- About Founders -->
+<section class="about-founders py-5">
+    <div class="container">
+        <h3 class="text-center fw-bold mb-2" style="font-size:2rem;">About Founders</h3>
+        <p class="text-center mb-5" style="font-size:2.5rem; color:#111111;">We are a leading local company in North Macedonia</p>
+        <div class="row justify-content-center">
+            <div class="col-md-4 col-lg-3 d-flex flex-column align-items-center mb-4">
+                <div class="card shadow mb-3" style="width: 200px; height: 200px; overflow: hidden; border-radius: 10px;">
+                    <img src="images/Founders/founder.png" alt="Founder" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <h4 class="mt-2 text-center fw-bold">Founder</h4>
+                <p class="text-center mb-0">Selman Ajdini</p>
+            </div>
+            <div class="col-md-4 col-lg-3 d-flex flex-column align-items-center mb-4">
+                <div class="card shadow mb-3" style="width: 200px; height: 200px; overflow: hidden; border-radius: 10px;">
+                    <img src="images/Founders/ceo.png" alt="CEO" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <h4 class="mt-2 text-center fw-bold">CEO</h4>
+                <p class="text-center mb-0">Sevdail Ajdini</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+
+<section class="contact-section py-5">
+    <div class="container">
+        <h2 class="display-5 text-center mb-5" data-i18n="contact-us-title">Contact Us</h2>
+        <div class="row g-4 d-flex align-items-center flex-lg-nowrap" style="min-height: 300px;">
+            <div class="d-flex justify-content-center align-items-center mb-4 mb-lg-0" style="height:100%;">
+        <div class="row g-4 d-flex align-items-center" style="min-height: 300px;">
+            <div class="d-flex justify-content-center align-items-center" style="height:100%;">
+                <div class="card mb-4 h-100 w-auto mx-auto">
+                    <div class="card-body">
+                        <h3 class="card-title" data-i18n="kumanovo-office">Zyrja Kryesore - Kumanovo</h3>
+                        <div class="location-info">
+                            <p><i class="fas fa-map-marker-alt me-2"></i><span data-i18n="kumanovo-address"><a href="https://maps.app.goo.gl/xYwb98wk6wYaXPr4A" target="_blank" class="text-decoration-none fw-semibold link-underline link-underline-opacity-0 link-underline-opacity-100-hover transition" style="color:#111; transition:color 0.2s;">NTP HOXHA, 4PR6+8VM, Kumanovo</a></span></p>
+                            <p><i class="fas fa-phone me-2"></i><span data-i18n="north macedonia-phone">031424503</span></p>
+                            <p><i class="fas fa-envelope me-2"></i><a href="mailto:Hoxha-ing@live.com" class="text-decoration-none fw-semibold" style="color:#111;">Hoxha-ing@live.com</a></p>
+                            <p><i class="fas fa-envelope me-2"></i><a href="mailto:hoxha-ku@live.com" class="text-decoration-none fw-semibold" style="color:#111;">hoxha-ku@live.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center align-items-center" style="height:100%;">
+                <div class="card w-auto mx-auto">
+                    <div class="card-body">
+                        <h3 class="card-title" data-i18n="working-hours">Orari i Punës</h3>
+                        <div class="hours-info">
+                           <!-- <p class="mb-0 fw-bold" style="font-size: 1.1rem;">E Hënë - E Premte: 8:00 - 17:00</p> -->
+                            <p class="mb-0 fw-bold" style="font-size: 1.1rem;">E Diell - Mbyllur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <script src="js/translations.js"></script>
+ <script src="js/main.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ <script>
+     window.addEventListener('scroll', function() {
+         const header = document.querySelector('.header');
+         const navbar = document.querySelector('.navbar');
+         const langDropdown = document.getElementById('langDropdown');
+         const langDropdownMobile = document.getElementById('langDropdownMobile');
+         if (window.scrollY > 30) {
+             header.classList.add('scrolled');
+             navbar.classList.add('scrolled');
+             navbar.classList.remove('navbar-dark');
+             navbar.classList.add('navbar-light');
+             if (langDropdown) {
+                 langDropdown.classList.remove('btn-outline-light');
+                 langDropdown.classList.add('btn-outline-dark');
+             }
+             if (langDropdownMobile) {
+                 langDropdownMobile.classList.remove('btn-outline-light');
+                 langDropdownMobile.classList.add('btn-outline-dark');
+             }
+         } else {
+             header.classList.remove('scrolled');
+             navbar.classList.remove('scrolled');
+             navbar.classList.remove('navbar-light');
+             navbar.classList.add('navbar-dark');
+             if (langDropdown) {
+                 langDropdown.classList.remove('btn-outline-dark');
+                 langDropdown.classList.add('btn-outline-light');
+             }
+             if (langDropdownMobile) {
+                 langDropdownMobile.classList.remove('btn-outline-dark');
+                 langDropdownMobile.classList.add('btn-outline-light');
+             }
+         }
+     });
+
+     function sendEmail(e) {
+         e.preventDefault();
+
+         const name = document.getElementById('name').value;
+         const email = document.getElementById('email').value;
+         const toEmail = document.getElementById('toEmail').value;
+         const message = document.getElementById('message').value;
+
+         // Create mailto link
+         const mailtoLink = `mailto:${toEmail}?subject=Message from ${name}&body=From: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+
+         // Open default email client
+         window.location.href = mailtoLink;
+
+         // Clear form
+         document.getElementById('homeContactForm').reset();
+     }
+ </script>
+
+ <!-- Footer Section -->
+<footer class="bg-dark text-white py-5 mt-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Column - Company Info with Logo -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="d-flex align-items-center gap-3">
+                    <img src="images/removed.png" alt="Logo" height="60" style="object-fit:contain;">
+                    <div>
+                        <h5 class="mb-2">Hoxha Engineering</h5>
+                        <p class="mb-0" data-i18n="footer-slogan">Building excellence through innovation and dedication since 1992.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Middle Column - Contact Info -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5 class="mb-3">Contact</h5>
+                <div class="d-flex flex-column gap-2">
+                    <p class="mb-0"><i class="fas fa-map-marker-alt me-2"></i> 4PR6+8VM, Kumanovo</p>
+                    <p class="mb-0"><i class="fas fa-phone me-2"></i> 031424503</p>
+                    <p class="mb-0"><i class="fas fa-envelope me-2"></i><a href="mailto:Hoxha-ing@live.com" class="text-decoration-none fw-semibold" style="color:#fff;">Hoxha-ing@live.com</a></p>
+                    <p class="mb-0"><i class="fas fa-envelope me-2"></i><a href="mailto:hoxha-ku@live.com" class="text-decoration-none fw-semibold" style="color:#fff;">hoxha-ku@live.com</a></p>
+                </div>
+            </div>
+            
+            <!-- Right Column - Social Media -->
+            <div class="col-md-4">
+                <h5 class="mb-3">Connect With Us</h5>
+                <div class="d-flex gap-3">
+                    <a href="https://www.facebook.com/profile.php?id=100057076855558" class="btn btn-outline-light px-4 py-2" target="_blank">
+                        <i class="fab fa-facebook-f me-2"></i>Facebook
+                    </a>
+                    <a href="https://www.instagram.com/hoxha.ing/" class="btn btn-outline-light px-4 py-2" target="_blank">
+                        <i class="fab fa-instagram me-2"></i>Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="mb-0">&copy; 2024 Hoxha Engineering. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

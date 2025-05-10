@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us - Hoxha Engineering</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/removed.png">
+    <style>body { visibility: hidden; }</style>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"></noscript>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/language-switcher.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- Header -->
+<header class="header fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="images/removed.png" alt="Logo" height="44" style="object-fit:contain;">
+                <span class="d-flex flex-column lh-1">
+                    <span class="fw-bold" style="font-size:1.7rem; letter-spacing:2px;">HOXHA</span>
+                    <span class="fw-normal" style="font-size:1rem; letter-spacing:0.2em;">ENGINEERING</span>
+                </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-lg-none ms-auto d-flex align-items-center" style="height:44px;">
+                <!-- Language Switcher for mobile -->
+                <div class="dropdown ms-2">
+                    <button class="btn btn-link text-light text-decoration-none dropdown-toggle d-flex align-items-center gap-1" type="button" id="langDropdownMobile" data-bs-toggle="dropdown" aria-expanded="false" style="font-size:1rem; height:38px;">
+                        <i class="fas fa-globe"></i>
+                        <span>Shqip</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end mt-2 shadow-sm border-0 p-2" aria-labelledby="langDropdownMobile" style="min-width:150px; border-radius:0.5rem;">
+                        <li><a class="dropdown-item d-flex align-items-center gap-2 rounded-2 py-2" href="#" onclick="setLanguage('sq')"><img src="images/flags/sq.png" alt="Albanian" width="20" class="me-2"> Shqip</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center gap-2 rounded-2 py-2" href="#" onclick="setLanguage('mk')"><img src="images/flags/mk.png" alt="Macedonian" width="20" class="me-2"> Македонски</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center gap-2 rounded-2 py-2" href="#" onclick="setLanguage('en')"><img src="images/flags/en.png" alt="English" width="20" class="me-2"> English</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ps-0 me-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html" data-i18n="projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html" data-i18n="services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="about.html" data-i18n="about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html" data-i18n="contact">Contact</a></li>
+                </ul>
+                <!-- Language Switcher for desktop -->
+                <div class="dropdown d-none d-lg-block">
+                    <button class="btn btn-link text-light text-decoration-none dropdown-toggle d-flex align-items-center gap-2" type="button" id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-globe"></i>
+                        <span>Shqip</span>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0" aria-labelledby="langDropdown">
+                        <li><a class="dropdown-item d-flex align-items-center gap-2" href="#" onclick="setLanguage('sq')"><img src="images/flags/sq.png" alt="Albanian" width="20"> Shqip</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center gap-2" href="#" onclick="setLanguage('mk')"><img src="images/flags/mk.png" alt="Macedonian" width="20"> Македонски</a></li>
+                        <li><a class="dropdown-item d-flex align-items-center gap-2" href="#" onclick="setLanguage('en')"><img src="images/flags/en.png" alt="English" width="20"> English</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<!-- About Hero Section -->
+<section class="about-hero d-flex align-items-center text-center text-white" style="background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('images/pages.png'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 500px;">
+    <div class="container">
+        <h1 class="display-4 animate__animated animate__fadeInUp" data-i18n="about-title">Rreth Nesh</h1>
+        <p class="lead animate__animated animate__fadeInUp" data-i18n="about-subtitle">Ne Jemi Kompania Kryesore Ndërkombëtare Në Botë</p>
+    </div>
+</section>
+
+<!-- Company Info Section -->
+<section class="company-info py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <p class="card-text" data-i18n="company-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                        <p class="card-text" data-i18n="company-details">Cras ultricies ligula sed magna dictum porta. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+                        <a href="services.html" class="btn btn-primary mt-3" data-i18n="our-services">Shërbimet Tona</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="row row-cols-1 g-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fas fa-hard-hat fa-3x mb-3 text-primary"></i>
+                                <h3 class="card-title" data-i18n="building-staff">Stafi i Ndërtimit</h3>
+                                <p class="card-text" data-i18n="building-staff-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fas fa-history fa-3x mb-3 text-primary"></i>
+                                <h3 class="card-title" data-i18n="history">Theksi i Historisë</h3>
+                                <p class="card-text" data-i18n="history-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fas fa-chart-line fa-3x mb-3 text-primary"></i>
+                                <h3 class="card-title" data-i18n="economic">Rezultatet Ekonomike</h3>
+                                <p class="card-text" data-i18n="economic-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Statistics Section -->
+<section class="statistics py-5 bg-light">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-md-4 g-4 stat-grid">
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h2 class="display-4 text-primary" data-i18n="success-title">25 Years Of Undefeated Success</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h2 class="display-4 text-primary" data-i18n="revenue-number">325</h2>
+                        <p class="card-text" data-i18n="revenue">Revenue in 2017 (Million)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h2 class="display-4 text-primary" data-i18n="colleagues-number">525</h2>
+                        <p class="card-text" data-i18n="colleagues">Colleagues & Counting</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h2 class="display-4 text-primary" data-i18n="projects-finished-number">302</h2>
+                        <p class="card-text" data-i18n="projects-finished">Projects Finished</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h2 class="display-4 text-primary" data-i18n="years-experience-number">25</h2>
+                        <p class="card-text" data-i18n="years-experience">Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="team py-5">
+    <div class="container">
+        <h2 class="display-5 text-center mb-5" data-i18n="our-experts">Ekspertët Tanë</h2>
+        <div class="row row-cols-1 row-cols-md-4 g-4 team-grid">
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <img src="images/team1.jpg" class="card-img-top" alt="Mike Rich">
+                    <div class="card-body">
+                        <h3 class="card-title" data-i18n="team1-name">Mike Rich</h3>
+                        <p class="card-text" data-i18n="team1-role">Arkitekt Kryesor</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <img src="images/team2.jpg" class="card-img-top" alt="Jenny Smith">
+                    <div class="card-body">
+                        <h3 class="card-title" data-i18n="team2-name">Jenny Smith</h3>
+                        <p class="card-text" data-i18n="team2-role">Inxhinier Kryesor (SHBA)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <img src="images/team3.jpg" class="card-img-top" alt="George Doe">
+                    <div class="card-body">
+                        <h3 class="card-title" data-i18n="team3-name">George Doe</h3>
+                        <p class="card-text" data-i18n="team3-role">Inxhinier Kryesor (Kina)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100 text-center">
+                    <img src="images/team4.jpg" class="card-img-top" alt="Maria Jay">
+                    <div class="card-body">
+                        <h3 class="card-title" data-i18n="team4-name">Maria Jay</h3>
+                        <p class="card-text" data-i18n="team4-role">Inxhinier Kryesor (Australia)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Founders Section -->
+<section class="founders py-5">
+    <div class="container">
+        <h2 class="display-5 text-center mb-2" style="font-weight:700;">About Founders</h2>
+        <p class="text-center mb-5" style="font-size:2.5rem; color:#111111;">We are a leading local company in North Macedonia</p>
+        <div class="row justify-content-end pe-md-5 pe-3">
+            <div class="col-md-3 d-flex flex-column align-items-center mb-4">
+                <div class="shadow" style="width: 180px; height: 180px; border-radius: 50%; overflow: hidden; background: #fff;">
+                    <img src="images/Founders/founder.png" alt="Founder" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+                </div>
+                <h4 class="mt-3 text-center fw-bold">Founder</h4>
+                <p class="text-center mb-0">Selman Ajdini</p>
+            </div>
+            <div class="col-md-3 d-flex flex-column align-items-center mb-4">
+                <div class="shadow" style="width: 180px; height: 180px; border-radius: 50%; overflow: hidden; background: #fff;">
+                    <img src="images/Founders/ceo.png" alt="CEO" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+                </div>
+                <h4 class="mt-3 text-center fw-bold">CEO</h4>
+                <p class="text-center mb-0">Sevdail Ajdini</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sustainability Section -->
+<section class="sustainability py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="display-5 mb-4" data-i18n="sustainability-title">Angazhuar Për të Mbajtur Njerëzit të Shëndetshëm dhe të Sigurt</h2>
+        <p class="lead mb-4" data-i18n="sustainability-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque in ipsum id orci porta dapibus.</p>
+        <a href="contact.html" class="btn btn-primary mb-4" data-i18n="get-in-touch">Na Kontaktoni</a>
+        <div class="practices">
+            <h3 class="h4 mb-4" data-i18n="best-practices">Ne Ndiqim Praktikat Më të Mira</h3>
+            <p class="mb-4" data-i18n="practices-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                <div class="col"><div class="card h-100 text-center"><div class="card-body"><p class="card-text" data-i18n="sustainability">Qëndrueshmëria</p></div></div></div>
+                <div class="col"><div class="card h-100 text-center"><div class="card-body"><p class="card-text" data-i18n="project-on-time">Projekti Në Kohë</p></div></div></div>
+                <div class="col"><div class="card h-100 text-center"><div class="card-body"><p class="card-text" data-i18n="modern-tech">Teknologjia Moderne</p></div></div></div>
+                <div class="col"><div class="card h-100 text-center"><div class="card-body"><p class="card-text" data-i18n="latest-designs">Dizajnet Më të Fundit</p></div></div></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Clients Section -->
+<section class="clients py-5 bg-light">
+    <div class="container">
+        <h2 class="display-5 text-center mb-5" data-i18n="our-clients">Klientët Tanë</h2>
+        <div class="row row-cols-2 row-cols-md-5 g-4 clients-grid">
+            <div class="col"><img src="images/client1.png" class="img-fluid filter-grayscale" alt="Client 1"></div>
+            <div class="col"><img src="images/client2.png" class="img-fluid filter-grayscale" alt="Client 2"></div>
+            <div class="col"><img src="images/client3.png" class="img-fluid filter-grayscale" alt="Client 3"></div>
+            <div class="col"><img src="images/client4.png" class="img-fluid filter-grayscale" alt="Client 4"></div>
+            <div class="col"><img src="images/client5.png" class="img-fluid filter-grayscale" alt="Client 5"></div>
+        </div>
+    </div>
+</section>
+
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+<script>
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('.header');
+        const navbar = document.querySelector('.navbar');
+        const langDropdown = document.getElementById('langDropdown');
+        const langDropdownMobile = document.getElementById('langDropdownMobile');
+        if (window.scrollY > 30) {
+            header.classList.add('scrolled');
+            navbar.classList.add('scrolled');
+            navbar.classList.remove('navbar-dark');
+            navbar.classList.add('navbar-light');
+            if (langDropdown) {
+                langDropdown.classList.remove('btn-outline-light');
+                langDropdown.classList.add('btn-outline-dark');
+            }
+            if (langDropdownMobile) {
+                langDropdownMobile.classList.remove('btn-outline-light');
+                langDropdownMobile.classList.add('btn-outline-dark');
+            }
+        } else {
+            header.classList.remove('scrolled');
+            navbar.classList.remove('scrolled');
+            navbar.classList.remove('navbar-light');
+            navbar.classList.add('navbar-dark');
+            if (langDropdown) {
+                langDropdown.classList.remove('btn-outline-dark');
+                langDropdown.classList.add('btn-outline-light');
+            }
+            if (langDropdownMobile) {
+                langDropdownMobile.classList.remove('btn-outline-dark');
+                langDropdownMobile.classList.add('btn-outline-light');
+            }
+        }
+    });
+</script>
+
+<!-- Footer Section -->
+<footer class="bg-dark text-white py-5 mt-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left Column - Company Info with Logo -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <div class="d-flex align-items-center gap-3">
+                    <img src="images/removed.png" alt="Logo" height="60" style="object-fit:contain;">
+                    <div>
+                        <h5 class="mb-2">Hoxha Engineering</h5>
+                        <p class="mb-0" data-i18n="footer-slogan">Building excellence through innovation and dedication since 1992.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Middle Column - Contact Info -->
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5 class="mb-3">Contact</h5>
+                <div class="d-flex flex-column gap-2">
+                    <p class="mb-0"><i class="fas fa-map-marker-alt me-2"></i> 4PR6+8VM, Kumanovo</p>
+                    <p class="mb-0"><i class="fas fa-phone me-2"></i> 031424503</p>
+                    <p class="mb-0"><i class="fas fa-envelope me-2"></i> hoxha-ku@live.com</p>
+                    <p class="mb-0"><i class="fas fa-envelope me-2"></i> Hoxha-ing@live.com</p>
+                </div>
+            </div>
+            
+            <!-- Right Column - Social Media -->
+            <div class="col-md-4">
+                <h5 class="mb-3">Connect With Us</h5>
+                <div class="d-flex gap-3">
+                    <a href="https://www.facebook.com/profile.php?id=100057076855558" class="btn btn-outline-light px-4 py-2" target="_blank">
+                        <i class="fab fa-facebook-f me-2"></i>Facebook
+                    </a>
+                    <a href="https://www.instagram.com/hoxha.ing/" class="btn btn-outline-light px-4 py-2" target="_blank">
+                        <i class="fab fa-instagram me-2"></i>Instagram
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="mb-0">&copy; 2024 Hoxha Engineering. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</html>

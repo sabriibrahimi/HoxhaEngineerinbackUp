@@ -1,0 +1,125 @@
+/* Contact Hero Section */
+.contact-hero {
+    height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/contact-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding-top: 80px;
+}
+
+.contact-hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+}
+
+.contact-hero-content p {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    animation: fadeInUp 1s ease 0.3s;
+}
+
+/* Contact Details Section */
+.contact-details {
+    padding: 3rem 5%;
+    background: var(--white);
+}
+
+.branches-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.branch-card {
+    background: var(--secondary-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: var(--transition);
+}
+
+.branch-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.branch-card h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    margin-bottom: 1rem;
+}
+
+/* Contact Form Section */
+.contact-form {
+    padding: 3rem 5%;
+    background: var(--secondary-color);
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+.form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.form-group label {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+}
+
+/* Working Hours Section */
+.working-hours {
+    padding: 3rem 5%;
+    background: var(--white);
+    text-align: center;
+}
+
+.hours-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hours-info p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-hero {
+        height: 40vh;
+    }
+    .form-container {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-details,
+    .contact-form,
+    .working-hours {
+        padding: 2rem 3%;
+    }
+    .branch-card {
+        padding: 1rem;
+    }
+}

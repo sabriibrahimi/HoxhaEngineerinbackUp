@@ -1,0 +1,57 @@
+/* Projects Hero Section */
+.projects-hero {
+    height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/projects-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding-top: 80px;
+}
+
+.projects-hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease;
+}
+
+.projects-hero-content p {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    animation: fadeInUp 1s ease 0.3s;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    padding: 3rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.project-card img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .projects-hero {
+        height: 40vh;
+    }
+    .projects-grid {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-card img {
+        aspect-ratio: 3/2;
+    }
+}
