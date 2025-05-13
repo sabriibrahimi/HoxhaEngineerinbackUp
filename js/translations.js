@@ -104,7 +104,8 @@ const translations = {
         "colleagues-number": "1520+",
         "colleagues": "Colleagues",
         "contact-us-title": "Contact Us",
-        "footer-slogan": "Building excellence through innovation and dedication since 1992."
+        "footer-slogan": "Building excellence through innovation and dedication since 1992.",
+        "current-lang": "English"
     },
     sq: {
         home: "Kryefaqja",
@@ -211,7 +212,8 @@ const translations = {
         "colleagues-number": "1520+",
         "colleagues": "Kolegë",
         "contact-us-title": "Na Kontaktoni",
-        "footer-slogan": "Ndërtimi i përsosmërisë përmes inovacionit dhe përkushtimit që nga viti 1992."
+        "footer-slogan": "Ndërtimi i përsosmërisë përmes inovacionit dhe përkushtimit që nga viti 1992.",
+        "current-lang": "Shqip"
     },
     mk: {
         home: "Почетна",
@@ -318,7 +320,8 @@ const translations = {
         "colleagues-number": "1520+",
         "colleagues": "Колеги",
         "contact-us-title": "Контактирајте Не",
-        "footer-slogan": "Градиме извонредност преку иновации и посветеност од 1992 година."
+        "footer-slogan": "Градиме извонредност преку иновации и посветеност од 1992 година.",
+        "current-lang": "Македонски"
     }
 }; 
 
@@ -348,8 +351,8 @@ function setLanguage(lang) {
     if (span) span.textContent = langNames[lang];
   }
   if (langDropdownMobile) {
-    const span = langDropdownMobile.querySelector('span');
-    if (span) span.textContent = langNames[lang];
+    const img = langDropdownMobile.querySelector('img');
+    if (img) img.src = `images/flags/${lang}.png`;
   }
 
   // Update active state in dropdown items

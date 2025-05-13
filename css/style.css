@@ -27,24 +27,18 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: transparent !important;
-    box-shadow: none !important;
-    border: none;
     transition: background 0.3s, box-shadow 0.3s;
+    background: transparent;
 }
 
 /* Navigation styles for all pages */
-.header .navbar:first-child {
+.header .navbar {
     padding: 0.5rem 0;
 }
 
-.header .navbar:first-child .container {
+.header .navbar .container {
     padding-left: 1.5rem;
-}
-
-.header .navbar:last-child {
-    padding: 0.3rem 0;
-    border-top: none !important;
+    padding-right: 1.5rem;
 }
 
 .header .navbar-nav {
@@ -84,7 +78,7 @@ body {
 }
 
 .header .navbar-brand img {
-    height: 35px;
+    height: 44px;
     width: auto;
     transition: none;
 }
@@ -113,21 +107,24 @@ body {
 }
 
 .header.scrolled .navbar-brand img {
-    height: 35px;
+    height: 44px;
 }
 
 @media (max-width: 991.98px) {
-    .header .navbar-brand {
-        margin-right: 1rem;
+    .header {
+        background: transparent;
     }
-    .header .navbar-brand img {
-        height: 30px;
+    .header.scrolled {
+        background: #fff !important;
     }
-    .header .navbar-nav .nav-link {
-        color: #fff !important;
+    .navbar-collapse {
+        background: transparent !important;
+        transition: background 0.3s, border-radius 0.3s;
+        border-radius: 0.75rem;
     }
-    .header.scrolled .navbar-nav .nav-link {
-        color: #333 !important;
+    .navbar-collapse.show {
+        background: rgba(0, 0, 0, 0.95) !important;
+        border-radius: 0.75rem;
     }
 }
 
@@ -194,6 +191,7 @@ body {
     display: flex;
     align-items: center;
     z-index: 1;
+    padding-top: 80px;
 }
 
 .home-hero::before {
@@ -329,5 +327,22 @@ body {
 }
 
 .header.scrolled .navbar-brand img {
-    height: 35px;
+    height: 44px;
+}
+
+@media (max-width: 991.98px) {
+  .header.scrolled .navbar-collapse,
+  .header .navbar-collapse {
+    background: rgba(0,0,0,0.95) !important;
+  }
+  .header.scrolled .navbar-nav .nav-link,
+  .header .navbar-nav .nav-link {
+    color: #fff !important;
+  }
+  .header.scrolled .navbar-nav .nav-link.active,
+  .header.scrolled .navbar-nav .nav-link:hover,
+  .header .navbar-nav .nav-link.active,
+  .header .navbar-nav .nav-link:hover {
+    color: #dc3545 !important;
+  }
 }
