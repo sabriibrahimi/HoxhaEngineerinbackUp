@@ -39,9 +39,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const navbars = document.querySelectorAll('.header .navbar');
         const langDropdown = document.getElementById('langDropdown');
         const langDropdownMobile = document.getElementById('langDropdownMobile');
-
+        
         if (window.scrollY > 30) {
             header.classList.add('scrolled');
+            // Ensure header remains visible and properly positioned
+            header.style.position = 'fixed';
+            header.style.top = '0';
+            header.style.left = '0';
+            header.style.right = '0';
+            header.style.width = '100%';
+            
             navbars.forEach(navbar => {
                 navbar.classList.add('scrolled');
                 navbar.classList.remove('navbar-dark');
@@ -57,6 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } else {
             header.classList.remove('scrolled');
+            // Ensure header remains visible when not scrolled as well
+            header.style.position = 'fixed';
+            header.style.top = '0';
+            
             navbars.forEach(navbar => {
                 navbar.classList.remove('scrolled');
                 navbar.classList.remove('navbar-light');
@@ -78,4 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initial check for header state
     handleHeaderScroll();
+    
+    // Run handleHeaderScroll on resize to ensure responsive behavior
+    window.addEventListener('resize', handleHeaderScroll);
 }); 
